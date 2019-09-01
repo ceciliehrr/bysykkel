@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name"> </string>
+    <string name="oslobilde">oslobilde</string>
+    <string name="sykkelbilde">sykkelbilde</string>
+    <string name="locksnr">Ledige låser: </string>
+    <string name="ledige_locks">ledige locks</string>
+    <string name="stasjonsnavn_tekst">Stasjonsnavn</string>
+    <string name="stasjonsnavn">Stasjonsnavn</string>
+    <string name="ledige_sykler_tekst">Ledige sykler</string>
+    <string name="ledige_sykler">Ledige sykler</string>
+    <string name="antall_ledige_sykler">antall ledige sykler</string>
+    <string name="antallsykler">antallSykler</string>
+    <string name="antalllocks">antallLocks</string>
+    <string name="s_k">Søk</string>
+    <string name="bysykkel_oslo">BYSYKKEL OSLO</string>
+</resources>

@@ -9,4 +9,5 @@ Google USB Driver er installert i tillegg til det som er default.
 
 Appen startes fra MainActivity.java. Den kan testet på to forskjellige måter:
 * På en virtuell enhet (AVD) i Android-emulatorene som følger med Android SDK.
+  
 * På en fysisk Android-enhet som du kobler til utviklings-PCen med USB-kabel.

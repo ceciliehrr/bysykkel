@@ -10,7 +10,7 @@ Bruk [Android Studio](https://developer.android.com/studio/) som består av Java
 Under SDK Tools i Android Studio bør du kontrollere at Intel x86 Emulator Accelerator (HAXM installer) og
 Google USB Driver er installert i tillegg til det som er default.
 
-Appen startes fra MainActivity.java som ligger i sykkelinfo\app\src\main\java\com\example\sykkelinfo
+Appen startes fra MainActivity.java som ligger i \app\src\main\java\com\example\sykkelinfo
 
 Den kan testet på to forskjellige måter:
 * På en virtuell enhet (AVD) i Android-emulatorene som følger med Android SDK.

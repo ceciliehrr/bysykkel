@@ -59,7 +59,6 @@ public class StasjonlisteAdapter extends RecyclerView.Adapter<StasjonlisteAdapte
 
         public StasjonViewHolder(@NonNull View itemView) {
             super(itemView);
-
             navnTextView = itemView.findViewById(R.id.stasjonsnavn_txt_id);
             antallLocksView = itemView.findViewById(R.id.antall_ledige_locks);
             antallSyklerView = itemView.findViewById(R.id.ledige_sykler_antall);
@@ -67,13 +66,10 @@ public class StasjonlisteAdapter extends RecyclerView.Adapter<StasjonlisteAdapte
 
         public void setSykkelstasjon(Sykkelstasjon stasjonToDisplay) {
             navnTextView.setText(stasjonToDisplay.getName());
-
             antallLocksView.setText(String.valueOf(stasjonToDisplay.getNum_docks_available()));
             antallSyklerView.setText(String.valueOf(stasjonToDisplay.getNum_bikes_available()));
-
         }
     }
-
     //Sier ifra nar lista er oppdatert etter sok
     public void filterlist(ArrayList<Sykkelstasjon> filteredList) {
         stasjonList = filteredList;

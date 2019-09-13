@@ -13,4 +13,9 @@
     <string name="antalllocks">antallLocks</string>
     <string name="s_k">Søk</string>
     <string name="bysykkel_oslo">BYSYKKEL OSLO</string>
+    <string name="kart_button">Kart</string>
+    <string name="se_kart">se kart</string>
+    <string name="se_i_kart">Se i kart</string>
+    <string name="home">Home</string>
+    <string name="go_home">go home</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.sykkelinfo;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +11,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -26,12 +29,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.sykkelinfo.Adapter.StasjonlisteAdapter;
+import com.example.sykkelinfo.Map.Kart_aktivitet;
 import com.example.sykkelinfo.Model.Sykkelstasjon;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -51,6 +56,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         readStationInfo();
+
+        //Lytter etter trykk pa knapp, apner kart
+        final Button button = findViewById(R.id.map_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this,Kart_aktivitet.class);
+
+                i.putParcelableArrayListExtra("lista", nyListe);
+                startActivity(i);
+            }
+        });
+
     }
 
 
@@ -68,7 +86,9 @@ public class MainActivity extends AppCompatActivity {
                                 JSONObject e = arrStasjoner.getJSONObject(i);
                                 String id = e.optString("station_id");
                                 String navn = e.optString("name");
-                                Sykkelstasjon stasjonen = new Sykkelstasjon(id, navn);
+                                double lat = e.optDouble("lat");
+                                double lon = e.optDouble("lon");
+                                Sykkelstasjon stasjonen = new Sykkelstasjon(id, navn, lat, lon);
                                 nyListe.add(stasjonen);
                             }
                             Log.d("Tostring:", "LISTE NAVN OG ID" + nyListe.toString());
@@ -186,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String s) {
-                filter(s.toString());
+                filter(s);
                 return false;
             }
         });
@@ -207,5 +227,8 @@ public class MainActivity extends AppCompatActivity {
         }
         adapter.filterlist(filteredList);
     }
+
+
+
 }
 

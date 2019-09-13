@@ -18,5 +18,5 @@ Den kan testet på to forskjellige måter:
 * På en fysisk Android-enhet som du kobler til utviklings-PCen med USB-kabel.
 
 ## Test
-Det er laget en unit-test som er plassert i sykkelinfo\app\src\test\java\com\example\sykkelinfo\Model\SykkelstasjonTest.java , 
+Det er laget en unit-test som er plassert: sykkelinfo\app\src\test\java\com\example\sykkelinfo\Model\SykkelstasjonTest.java , 
 og en MainActivityTest i Espresso som tester tittel og knapp(ny aktivitet), er plassert: sykkelinfo\app\src\androidTest\java\com\example\sykkelinfo\MainActivityTest.java
